@@ -43,3 +43,22 @@ class BinarySearchTree:
             else:
                 temp = temp.right
         return None
+
+
+# use case
+# Create a new binary search tree
+bst = BinarySearchTree()
+
+# Insert values into the binary search tree
+values_to_insert = [50, 30, 70, 20, 40, 60, 80]
+for value in values_to_insert:
+    bst.insert(value)
+
+# Search for values
+search_values = [70, 25, 60]
+for value in search_values:
+    result = bst.search(value)
+    if result:
+        print(f"Value {value} found in the tree.")
+    else:
+        print(f"Value {value} not found in the tree.")
