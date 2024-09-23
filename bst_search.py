@@ -1,3 +1,5 @@
+# binary search tree
+
 class Node:
     def __init__(self, value):
         self.value = value
