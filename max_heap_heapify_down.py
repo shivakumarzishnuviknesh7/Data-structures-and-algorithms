@@ -69,3 +69,37 @@ class MaxHeap:
     def _get_parent_index(index):
         return (index - 1) // 2
 
+
+
+# Task Priority Management System using MaxHeap
+class Task:
+    def __init__(self, description, priority):
+        self.description = description
+        self.priority = priority
+
+    def __repr__(self):
+        return f"Task(description='{self.description}', priority={self.priority})"
+
+
+# Create a max heap to manage task priorities
+task_heap = MaxHeap()
+
+# Insert tasks with different priorities into the max heap
+tasks = [
+    Task("Fix critical bug", 5),
+    Task("Develop new feature", 3),
+    Task("Write documentation", 2),
+    Task("Conduct code review", 4),
+    Task("Update dependencies", 1),
+]
+
+# Insert each task into the heap based on its priority
+for task in tasks:
+    task_heap.insert((task.priority, task))
+
+# Pop tasks based on their priority
+print("Tasks to complete in priority order:")
+while task := task_heap.pop():
+    priority, task_info = task
+    print(f"{task_info.description} with priority {priority}")
+
