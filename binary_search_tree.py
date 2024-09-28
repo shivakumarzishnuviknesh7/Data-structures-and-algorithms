@@ -46,19 +46,23 @@ class BinarySearchTree:
 
 
 # use case
-# Create a new binary search tree
-bst = BinarySearchTree()
+# Create a new binary search tree for managing employee salaries
+salary_bst = BinarySearchTree()
 
-# Insert values into the binary search tree
-values_to_insert = [50, 30, 70, 20, 40, 60, 80]
-for value in values_to_insert:
-    bst.insert(value)
+# Insert employee salaries into the binary search tree
+employee_salaries = [50000, 30000, 70000, 20000, 40000, 60000, 80000]
+for salary in employee_salaries:
+    salary_bst.insert(salary)
 
-# Search for values
-search_values = [70, 25, 60]
-for value in search_values:
-    result = bst.search(value)
+# Search for specific salaries to check if they exist in the system
+search_salaries = [70000, 25000, 60000]
+for salary in search_salaries:
+    result = salary_bst.search(salary)
     if result:
-        print(f"Value {value} found in the tree.")
+        print(f"Salary ${salary} found in the system.")
     else:
-        print(f"Value {value} not found in the tree.")
+        print(f"Salary ${salary} not found in the system.")
+
+
+
+
