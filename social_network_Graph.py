@@ -32,6 +32,10 @@ class Graph:
             print(f"{node}: {neighbors}")
 
 
+
+
+#use case
+
 class SocialNetwork:
     def __init__(self):
         self.graph = Graph()
