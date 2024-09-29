@@ -42,7 +42,7 @@ class Trie:
             self._collect_all_words(child_node, prefix + char, result)
 
 
-# Example usage:
+# Example  usage:
 trie = Trie()
 trie.insert("apple")
 trie.insert("app")
